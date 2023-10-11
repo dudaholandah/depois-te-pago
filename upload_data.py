@@ -43,14 +43,12 @@ def pessoas_to_df():
   pessoas = upload_pessoas()
   
   data = [{"nome": pessoa.nome,
-        "pago por voce": f"R$ {pessoa.saldo_pagou:.2f}",
-        "sua parte": f"R$ {pessoa.saldo_envolvido:.2f}",
-        "saldo recebido": f"R$ {pessoa.saldo_recebido:.2f}"} 
+        "pago por voce": pessoa.saldo_pagou,
+        "sua parte": pessoa.saldo_envolvido,
+        "falta receber/transferir": (pessoa.saldo_pagou - pessoa.saldo_envolvido) - pessoa.saldo_recebido} 
         for pessoa in pessoas]
 
   df = pd.DataFrame(data)
-  if not df.empty:
-    df.set_index('nome', inplace=True)
 
   return df 
   
@@ -65,15 +63,13 @@ def roles_to_df():
   roles = upload_roles()
 
   data = [{"nome": role.nome,
-          "valor": f"R$ {role.valor:.2f}",
+          "valor": float(role.valor),
           "pagou": role.pagou.nome,
           "envolvidos": [pessoa.nome for pessoa in role.envolvidos],
           "transferiu": [pessoa.nome for pessoa in role.transferiu]}
           for role in roles]
 
   df = pd.DataFrame(data)
-  if not df.empty:
-    df.set_index('nome', inplace=True)
 
   return df
 
