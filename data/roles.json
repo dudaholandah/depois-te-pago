@@ -1,3 +1,29 @@
 [
-  
+  {
+    "idx": 0,
+    "nome": "teste",
+    "pagou": {
+      "nome": "Bruno",
+      "saldo_pagou": 30.0,
+      "saldo_envolvido": 15.0,
+      "saldo_recebido": 0
+    },
+    "valor": 30.0,
+    "envolvidos": [
+      {
+        "nome": "Bruno",
+        "saldo_pagou": 30.0,
+        "saldo_envolvido": 15.0,
+        "saldo_recebido": 0
+      },
+      {
+        "nome": "Duda",
+        "saldo_pagou": 0,
+        "saldo_envolvido": 15.0,
+        "saldo_recebido": 0
+      }
+    ],
+    "transferiu": [],
+    "cada": 15.0
+  }
 ]

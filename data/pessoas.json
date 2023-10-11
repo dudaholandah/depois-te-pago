@@ -1,14 +1,14 @@
 [
   {
     "nome": "Bruno",
-    "saldo_pagou": 0,
-    "saldo_envolvido": 0,
+    "saldo_pagou": 30.0,
+    "saldo_envolvido": 15.0,
     "saldo_recebido": 0
   },
   {
     "nome": "Duda",
     "saldo_pagou": 0,
-    "saldo_envolvido": 0,
+    "saldo_envolvido": 15.0,
     "saldo_recebido": 0
   }
 ]
