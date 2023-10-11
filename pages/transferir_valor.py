@@ -1,9 +1,9 @@
 import streamlit as st
 from st_pages import add_page_title
-from pessoa import Pessoa
-from role import Role
+from entity.pessoa import Pessoa
+from entity.role import Role
 import pandas as pd
-from upload_data import *
+from services.upload_data import *
 from streamlit_extras.switch_page_button import switch_page
 
 
@@ -78,11 +78,5 @@ def main():
       atualizar_pessoa(pessoa_obj, role_obj.pagou, role_obj, valor)
       switch_page("Depois te pago")
       
-
-    
-    
-
-
-
 if __name__ == "__main__":
   main()

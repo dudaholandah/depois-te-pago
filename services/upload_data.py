@@ -1,5 +1,5 @@
-from pessoa import Pessoa
-from role import Role
+from entity.pessoa import Pessoa
+from entity.role import Role
 import pandas as pd
 import json
 

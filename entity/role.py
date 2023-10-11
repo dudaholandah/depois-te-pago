@@ -1,4 +1,4 @@
-from pessoa import Pessoa
+from entity.pessoa import Pessoa
 
 class Role:
   def __init__(self, idx, nome, pagou : Pessoa, valor, envolvidos : list[Pessoa], transferiu : list[Pessoa], cada):

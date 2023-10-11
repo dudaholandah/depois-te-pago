@@ -1,11 +1,10 @@
 import streamlit as st
 from st_pages import add_page_title
-from upload_data import *
-from role import Role
+from services.upload_data import *
+from entity.role import Role
 from streamlit_extras.switch_page_button import switch_page
 
 add_page_title(layout="wide")
-
 
 def adicionar_role(role : Role):
 
