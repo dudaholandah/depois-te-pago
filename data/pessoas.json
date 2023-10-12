@@ -1,14 +1,38 @@
 [
   {
+    "nome": "Ariel",
+    "saldo_pagou": 0,
+    "saldo_envolvido": 98.36999999999999,
+    "saldo_recebido": 0
+  },
+  {
     "nome": "Bruno",
-    "saldo_pagou": 30.0,
-    "saldo_envolvido": 15.0,
+    "saldo_pagou": 443.59999999999997,
+    "saldo_envolvido": 98.36999999999999,
+    "saldo_recebido": 92.11999999999999
+  },
+  {
+    "nome": "Claudio",
+    "saldo_pagou": 31.25,
+    "saldo_envolvido": 98.36999999999999,
     "saldo_recebido": 0
   },
   {
     "nome": "Duda",
+    "saldo_pagou": 92.11999999999999,
+    "saldo_envolvido": 98.36999999999999,
+    "saldo_recebido": 0
+  },
+  {
+    "nome": "Enzo",
     "saldo_pagou": 0,
-    "saldo_envolvido": 15.0,
+    "saldo_envolvido": 0,
+    "saldo_recebido": 0
+  },
+  {
+    "nome": "Laura",
+    "saldo_pagou": 0,
+    "saldo_envolvido": 81.36999999999999,
     "saldo_recebido": 0
   }
 ]
