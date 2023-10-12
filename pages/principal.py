@@ -4,6 +4,7 @@ from services.upload_data import *
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
 import numpy as np
+from services.dataframe import *
 
 add_page_title(layout="wide")
 
@@ -54,18 +55,6 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
 
   return df
 
-def write_df(df : pd.DataFrame):
-  if not df.empty:
-    df.set_index('nome', inplace=True)
-
-  df = df.copy()
-
-  for column in df.columns:
-    if is_numeric_dtype(df[column]):
-      df[column] = df[column].map(lambda x : f"R$ {x:.2f}" if x >= 0 else f"- R$ {abs(x):.2f}")
-
-  st.write(df)
-
 def main():
   
   st.subheader(":running: Tabela de roles")
@@ -75,7 +64,7 @@ def main():
 
   write_df(df_roles)
 
-  st.subheader(":money_with_wings: Tabela de saldos individuais")
+  st.subheader(":abacus: Tabela de saldos individuais")
   
   df_individual = pessoas_to_df()
   df_individual = filter_dataframe(df_individual)

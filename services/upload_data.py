@@ -63,7 +63,8 @@ def roles_to_df():
   roles = upload_roles()
 
   data = [{"nome": role.nome,
-          "valor": float(role.valor),
+          "valor total": float(role.valor),
+          "valor para cada": role.cada,
           "pagou": role.pagou.nome,
           "envolvidos": [pessoa.nome for pessoa in role.envolvidos],
           "transferiu": [pessoa.nome for pessoa in role.transferiu]}

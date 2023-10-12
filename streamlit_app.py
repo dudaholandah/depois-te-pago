@@ -8,11 +8,14 @@ from streamlit_extras.switch_page_button import switch_page
 
 show_pages(
   [
-    Page("pages/principal.py", "Depois te pago", "🏠"),
+    Page("pages/principal.py", "Depois te pago", ":money_with_wings:"),
     Page("pages/adicionar_role.py", "Adicionar role", ":heavy_plus_sign:"),
-    Page("pages/transferir_valor.py", "Transferir valor", ":heavy_dollar_sign:")
+    Page("pages/transferir_valor.py", "Transferir valor", ":heavy_dollar_sign:"),
+    Page("pages/checar_transferencias.py", "Checar transferencias", ":moneybag:")
   ]
 )
+
+
 
 if __name__ == "__main__":
   switch_page("Depois te pago")
