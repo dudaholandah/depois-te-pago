@@ -4,92 +4,40 @@
     "nome": "mercado fondue",
     "pagou": {
       "nome": "Bruno",
-      "saldo_pagou": 1683.0,
-      "saldo_envolvido": 336.59999999999997,
-      "saldo_recebido": 0
+      "saldo_pagou": 187.0,
+      "saldo_envolvido": 37.4,
+      "saldo_recebido": 37.4
     },
     "valor": 187.0,
     "envolvidos": [
       {
         "nome": "Ariel",
         "saldo_pagou": 0,
-        "saldo_envolvido": 336.59999999999997,
+        "saldo_envolvido": 37.4,
         "saldo_recebido": 0
       },
       {
         "nome": "Bruno",
         "saldo_pagou": 187.0,
-        "saldo_envolvido": 336.59999999999997,
+        "saldo_envolvido": 37.4,
         "saldo_recebido": 0
       },
       {
         "nome": "Claudio",
         "saldo_pagou": 0,
-        "saldo_envolvido": 336.59999999999997,
+        "saldo_envolvido": 37.4,
         "saldo_recebido": 0
       },
       {
         "nome": "Duda",
         "saldo_pagou": 0,
-        "saldo_envolvido": 336.59999999999997,
+        "saldo_envolvido": 37.4,
         "saldo_recebido": 0
       },
       {
         "nome": "Laura",
         "saldo_pagou": 0,
-        "saldo_envolvido": 336.59999999999997,
-        "saldo_recebido": 0
-      }
-    ],
-    "transferiu": [
-      {
-        "nome": "Duda",
-        "saldo_pagou": 0,
-        "saldo_envolvido": 98.36999999999999,
-        "saldo_recebido": 0
-      }
-    ],
-    "cada": 37.4
-  },
-  {
-    "idx": 0,
-    "nome": "pizza (role do fondue)",
-    "pagou": {
-      "nome": "Bruno",
-      "saldo_pagou": 1086.1999999999998,
-      "saldo_envolvido": 217.23999999999998,
-      "saldo_recebido": 0
-    },
-    "valor": 112.4,
-    "envolvidos": [
-      {
-        "nome": "Ariel",
-        "saldo_pagou": 0,
-        "saldo_envolvido": 217.23999999999998,
-        "saldo_recebido": 0
-      },
-      {
-        "nome": "Bruno",
-        "saldo_pagou": 299.4,
-        "saldo_envolvido": 217.23999999999998,
-        "saldo_recebido": 0
-      },
-      {
-        "nome": "Claudio",
-        "saldo_pagou": 0,
-        "saldo_envolvido": 217.23999999999998,
-        "saldo_recebido": 0
-      },
-      {
-        "nome": "Duda",
-        "saldo_pagou": 0,
-        "saldo_envolvido": 217.23999999999998,
-        "saldo_recebido": 0
-      },
-      {
-        "nome": "Laura",
-        "saldo_pagou": 0,
-        "saldo_envolvido": 217.23999999999998,
+        "saldo_envolvido": 37.4,
         "saldo_recebido": 0
       }
     ],
@@ -101,92 +49,47 @@
         "saldo_recebido": 0
       }
     ],
-    "cada": 22.48
+    "cada": 37.4
   },
   {
     "idx": 0,
-    "nome": "mercado 2 (fondue)",
+    "nome": "pizza (festa do fondue)",
     "pagou": {
-      "nome": "Claudio",
-      "saldo_pagou": 218.75,
-      "saldo_envolvido": 103.63,
-      "saldo_recebido": 0
+      "nome": "Bruno",
+      "saldo_pagou": 299.4,
+      "saldo_envolvido": 59.879999999999995,
+      "saldo_recebido": 22.48
     },
-    "valor": 31.25,
+    "valor": 112.4,
     "envolvidos": [
       {
         "nome": "Ariel",
         "saldo_pagou": 0,
-        "saldo_envolvido": 103.63,
+        "saldo_envolvido": 59.879999999999995,
         "saldo_recebido": 0
       },
       {
         "nome": "Bruno",
         "saldo_pagou": 299.4,
-        "saldo_envolvido": 103.63,
+        "saldo_envolvido": 59.879999999999995,
         "saldo_recebido": 0
       },
       {
         "nome": "Claudio",
-        "saldo_pagou": 31.25,
-        "saldo_envolvido": 103.63,
+        "saldo_pagou": 0,
+        "saldo_envolvido": 59.879999999999995,
         "saldo_recebido": 0
       },
       {
         "nome": "Duda",
         "saldo_pagou": 0,
-        "saldo_envolvido": 103.63,
+        "saldo_envolvido": 59.879999999999995,
         "saldo_recebido": 0
       },
       {
         "nome": "Laura",
         "saldo_pagou": 0,
-        "saldo_envolvido": 103.63,
-        "saldo_recebido": 0
-      }
-    ],
-    "transferiu": [],
-    "cada": 6.25
-  },
-  {
-    "idx": 0,
-    "nome": "mercado (festa do pijama 2)",
-    "pagou": {
-      "nome": "Bruno",
-      "saldo_pagou": 756.6000000000001,
-      "saldo_envolvido": 157.57,
-      "saldo_recebido": 0
-    },
-    "valor": 76.2,
-    "envolvidos": [
-      {
-        "nome": "Ariel",
-        "saldo_pagou": 0,
-        "saldo_envolvido": 157.57,
-        "saldo_recebido": 0
-      },
-      {
-        "nome": "Bruno",
-        "saldo_pagou": 375.59999999999997,
-        "saldo_envolvido": 157.57,
-        "saldo_recebido": 0
-      },
-      {
-        "nome": "Claudio",
-        "saldo_pagou": 31.25,
-        "saldo_envolvido": 157.57,
-        "saldo_recebido": 0
-      },
-      {
-        "nome": "Duda",
-        "saldo_pagou": 0,
-        "saldo_envolvido": 157.57,
-        "saldo_recebido": 0
-      },
-      {
-        "nome": "Laura",
-        "saldo_pagou": 0,
-        "saldo_envolvido": 157.57,
+        "saldo_envolvido": 59.879999999999995,
         "saldo_recebido": 0
       }
     ],
@@ -198,41 +101,47 @@
         "saldo_recebido": 0
       }
     ],
-    "cada": 15.24
+    "cada": 22.48
   },
   {
     "idx": 0,
-    "nome": "dog (festa do pijama 2)",
+    "nome": "almoco (festa do fondue)",
     "pagou": {
       "nome": "Bruno",
-      "saldo_pagou": 715.5999999999999,
-      "saldo_envolvido": 166.37,
-      "saldo_recebido": 0
+      "saldo_pagou": 375.59999999999997,
+      "saldo_envolvido": 75.11999999999999,
+      "saldo_recebido": 15.24
     },
-    "valor": 68.0,
+    "valor": 76.2,
     "envolvidos": [
       {
         "nome": "Ariel",
         "saldo_pagou": 0,
-        "saldo_envolvido": 166.37,
+        "saldo_envolvido": 75.11999999999999,
         "saldo_recebido": 0
       },
       {
         "nome": "Bruno",
-        "saldo_pagou": 443.59999999999997,
-        "saldo_envolvido": 166.37,
+        "saldo_pagou": 375.59999999999997,
+        "saldo_envolvido": 75.11999999999999,
         "saldo_recebido": 0
       },
       {
         "nome": "Claudio",
-        "saldo_pagou": 31.25,
-        "saldo_envolvido": 166.37,
+        "saldo_pagou": 0,
+        "saldo_envolvido": 75.11999999999999,
         "saldo_recebido": 0
       },
       {
         "nome": "Duda",
         "saldo_pagou": 0,
-        "saldo_envolvido": 166.37,
+        "saldo_envolvido": 75.11999999999999,
+        "saldo_recebido": 0
+      },
+      {
+        "nome": "Laura",
+        "saldo_pagou": 0,
+        "saldo_envolvido": 75.11999999999999,
         "saldo_recebido": 0
       }
     ],
@@ -244,6 +153,97 @@
         "saldo_recebido": 0
       }
     ],
+    "cada": 15.24
+  },
+  {
+    "idx": 0,
+    "nome": "cachorro quente (festa do fondue)",
+    "pagou": {
+      "nome": "Bruno",
+      "saldo_pagou": 443.59999999999997,
+      "saldo_envolvido": 92.11999999999999,
+      "saldo_recebido": 17.0
+    },
+    "valor": 68.0,
+    "envolvidos": [
+      {
+        "nome": "Ariel",
+        "saldo_pagou": 0,
+        "saldo_envolvido": 92.11999999999999,
+        "saldo_recebido": 0
+      },
+      {
+        "nome": "Bruno",
+        "saldo_pagou": 443.59999999999997,
+        "saldo_envolvido": 92.11999999999999,
+        "saldo_recebido": 0
+      },
+      {
+        "nome": "Claudio",
+        "saldo_pagou": 0,
+        "saldo_envolvido": 92.11999999999999,
+        "saldo_recebido": 0
+      },
+      {
+        "nome": "Duda",
+        "saldo_pagou": 0,
+        "saldo_envolvido": 92.11999999999999,
+        "saldo_recebido": 0
+      }
+    ],
+    "transferiu": [
+      {
+        "nome": "Duda",
+        "saldo_pagou": 92.11999999999999,
+        "saldo_envolvido": 98.36999999999999,
+        "saldo_recebido": 0
+      }
+    ],
     "cada": 17.0
+  },
+  {
+    "idx": 0,
+    "nome": "mercado 2 fondue",
+    "pagou": {
+      "nome": "Claudio",
+      "saldo_pagou": 31.25,
+      "saldo_envolvido": 98.36999999999999,
+      "saldo_recebido": 0
+    },
+    "valor": 31.25,
+    "envolvidos": [
+      {
+        "nome": "Ariel",
+        "saldo_pagou": 0,
+        "saldo_envolvido": 98.36999999999999,
+        "saldo_recebido": 0
+      },
+      {
+        "nome": "Bruno",
+        "saldo_pagou": 443.59999999999997,
+        "saldo_envolvido": 98.36999999999999,
+        "saldo_recebido": 0
+      },
+      {
+        "nome": "Claudio",
+        "saldo_pagou": 31.25,
+        "saldo_envolvido": 98.36999999999999,
+        "saldo_recebido": 0
+      },
+      {
+        "nome": "Duda",
+        "saldo_pagou": 0,
+        "saldo_envolvido": 98.36999999999999,
+        "saldo_recebido": 0
+      },
+      {
+        "nome": "Laura",
+        "saldo_pagou": 0,
+        "saldo_envolvido": 81.36999999999999,
+        "saldo_recebido": 0
+      }
+    ],
+    "transferiu": [],
+    "cada": 6.25
   }
 ]
