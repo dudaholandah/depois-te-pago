@@ -46,7 +46,7 @@ def main():
   nome = st.text_input("Nome:")
   valor = st.number_input("Valor:")
   pagou = st.selectbox("Quem pagou:", [pessoa.nome for pessoa in pessoas])
-  envolvidos = st.multiselect("Envolvidos:", [pessoa.nome for pessoa in pessoas])
+  envolvidos = st.multiselect("Envolvidos:", [pessoa.nome for pessoa in pessoas], default=pagou)
 
   pessoas_envolvidas = []
 
@@ -58,6 +58,7 @@ def main():
   
   cada = 0 if len(pessoas_envolvidas) == 0 else ( valor / len(pessoas_envolvidas) )
   role = Role(0, nome, pessoa_pagou, valor, pessoas_envolvidas, [], cada)
+  role.atualizar_pessoas()
 
   if st.button("Enviar"):
     atualizar_pessoa(role)

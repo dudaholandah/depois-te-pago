@@ -1,5 +1,4 @@
 from entity.pessoa import Pessoa
-
 class Role:
   def __init__(self, idx, nome, pagou : Pessoa, valor, envolvidos : list[Pessoa], transferiu : list[Pessoa], cada):
     self.idx = idx
@@ -8,8 +7,7 @@ class Role:
     self.valor = valor
     self.envolvidos = envolvidos
     self.transferiu = transferiu
-    self.cada = cada #valor / len(envolvidos)
-    self.atualizar_pessoas()
+    self.cada = cada
 
   def atualizar_pessoas(self):
     self.pagou.saldo_pagou += self.valor

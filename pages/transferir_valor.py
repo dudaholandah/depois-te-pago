@@ -5,78 +5,71 @@ from entity.role import Role
 import pandas as pd
 from services.upload_data import *
 from streamlit_extras.switch_page_button import switch_page
-
+from services.dataframe import *
+from services.manage_role import *
+from services.manage_pessoa import *
 
 add_page_title(layout="wide")
 
-def atualizar_pessoa(transferiu : Pessoa, recebeu : Pessoa, role: Role, valor):
+def atualizar_dados(pessoa_transferiu : Pessoa, roles : list[Role]):
+  
+  for role in roles:
+    valor = role.cada
+    pessoa_recebeu = role.pagou
 
-  pessoas = upload_pessoas()
-  roles = upload_roles()
+    pessoa_transferiu.saldo_pagou += valor
+    pessoa_recebeu.saldo_recebido += valor
+    role.transferiu.append(pessoa_transferiu)
 
-  for pessoa in pessoas:
-    if pessoa.nome == transferiu.nome:
-      pessoa.saldo_pagou += valor
-    elif pessoa.nome == recebeu.nome:
-      pessoa.saldo_recebido += valor
-
-
-  for each in roles:
-    if each.nome == role.nome:
-      each.transferiu.append(transferiu)
-
-  dict_pessoas = [obj.__dict__ for obj in pessoas]
-  dict_roles = [{"idx": obj.idx,
-                "nome": obj.nome,
-                "pagou" : obj.pagou.__dict__,
-                "valor" : obj.valor,
-                "envolvidos" : [item.__dict__ for item in obj.envolvidos],
-                "transferiu" : [item.__dict__ for item in obj.transferiu],
-                "cada" : obj.cada} 
-                for obj in roles]
-
-  with open('data/pessoas.json', 'w') as json_file:
-    json.dump(dict_pessoas, json_file, indent=2)
-
-  with open('data/roles.json', 'w') as json_file:
-    json.dump(dict_roles, json_file, indent=2)
+    atualizar_pessoa(pessoa_transferiu)
+    atualizar_pessoa(pessoa_recebeu)
+    atualizar_role(role)
 
 
 def main():
   roles = upload_roles()
+  roles_df = roles_to_df()
   pessoas = upload_pessoas()
 
-  if len(roles) == 0:
-    st.write("Voce nao criou ainda nenhum role.")
-  else:
-    role = st.selectbox("Selecione um role:", [role.nome for role in roles])
+  ### seleciona a pessoa
+  pessoa = st.selectbox("Escolha a pessoa que ira transferir: ", [p.nome for p in pessoas])
+  pessoa_obj = pessoa_name_to_obj(pessoa, pessoas)
 
-    for each in roles:
-      if each.nome == role:
-        role_obj = each
 
-    pessoas_validas = []
+  ### define quais roles ela ainda nao transferiu
+  roles_validos = []
+  for i, role in roles_df.iterrows():
+    if pessoa in role['envolvidos'] and pessoa not in role['transferiu'] and pessoa != role['pagou']:
+      roles_validos.append(role)
 
-    for pessoa in pessoas:
-      if pessoa.nome != role_obj.pagou.nome and pessoa.nome not in [p.nome for p in role_obj.transferiu]:
-        pessoas_validas.append(pessoa.nome)
+  ### seleciona o role
+  choice_role = st.multiselect("Selecione qual ou quais roles voce gostaria de quitar as dividas:", [r.nome for r in roles_validos])
+  choice_roles_obj = [role_name_to_obj(x, roles) for x in choice_role]
 
-    pessoa = st.selectbox("Escolha a pessoa que ira transferir:", pessoas_validas)
+  ### calcula a divida -> (pessoa, quantidade)
+  transf = {}
+  for r in choice_role:
+    for i, each in roles_df.iterrows():
+      if each['nome'] == r:
+        if each['pagou'] not in transf: transf[each['pagou']] = each['valor para cada']
+        else: transf[each['pagou']] += each['valor para cada']
 
-    for each in pessoas:
-      if each.nome == pessoa:
-        pessoa_obj = each
+  ### mostra o valor da divida e para quem deve
+  ans = True
+  for key, value in transf.items():
+    choice = st.radio(f":ballot_box_with_check: O valor para quitar a divida com **{key}** eh **R$ {value:.2f}**. Deseja transferir essa valor?", ["Sim", "Nao"])
+    ans &= (choice == "Sim")
 
-    choice = st.radio(f"O valor para quitar a divida eh R$ {role_obj.cada:.2f}. Deseja transferir essa valor?", ["Sim", "Nao"])
-
-    if choice == "Nao":
-      valor = st.number_input("Digite o valor que deseja transferir.")
-    else:
-      valor = role_obj.cada
-
-    if st.button("Enviar"):
-      atualizar_pessoa(pessoa_obj, role_obj.pagou, role_obj, valor)
+  ### se confirma a transacao, atualiza os dados
+  if ans:
+    if st.button("Enviar"): 
+      atualizar_dados(pessoa_obj, choice_roles_obj)
       switch_page("Depois te pago")
+  ### se nao confirma recebe um warning
+  else:
+    st.button("Enviar", disabled=st.session_state.get("disabled", True))
+    st.error("Eh preciso confirmar as transacoes para finalizar.")
+
       
 if __name__ == "__main__":
   main()
